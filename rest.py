@@ -363,11 +363,6 @@ def tabla():
        up_telefono = request.form['Numero']
        up_direccion = request.form['Direccion']
        up_correo = request.form['Correo']
-
-       sqlUpdate = 'UPDATE usuarios SET Nombre=%s, Numero=%s, Direccion=%s, Correo=%s WHERE id=%s'
-       valuesUpdate = (up_Nombre, up_telefono, up_direccion, up_correo, getid)
-
-       mysql.execute = (sqlUpdate, valuesUpdate)
        dbconect.commit()
 
        msj = f"Se actualizo el ID: {getid}"
